@@ -54,14 +54,38 @@
 		66E9E75C2ABB7AFD00DC1412 /* SushiApp */ = {
 			isa = PBXGroup;
 			children = (
-				66E9E75D2ABB7AFD00DC1412 /* AppDelegate.swift */,
-				66E9E75F2ABB7AFD00DC1412 /* SceneDelegate.swift */,
-				66E9E7612ABB7AFD00DC1412 /* ViewController.swift */,
+				66E9E7732ABB7F9100DC1412 /* Presentation */,
+				66E9E7712ABB7F1900DC1412 /* System */,
+			);
+			path = SushiApp;
+			sourceTree = "<group>";
+		};
+		66E9E7712ABB7F1900DC1412 /* System */ = {
+			isa = PBXGroup;
+			children = (
 				66E9E7662ABB7AFF00DC1412 /* Assets.xcassets */,
 				66E9E7682ABB7AFF00DC1412 /* LaunchScreen.storyboard */,
 				66E9E76B2ABB7AFF00DC1412 /* Info.plist */,
+				66E9E7722ABB7F2900DC1412 /* Life cycle */,
 			);
-			path = SushiApp;
+			path = System;
+			sourceTree = "<group>";
+		};
+		66E9E7722ABB7F2900DC1412 /* Life cycle */ = {
+			isa = PBXGroup;
+			children = (
+				66E9E75D2ABB7AFD00DC1412 /* AppDelegate.swift */,
+				66E9E75F2ABB7AFD00DC1412 /* SceneDelegate.swift */,
+			);
+			path = "Life cycle";
+			sourceTree = "<group>";
+		};
+		66E9E7732ABB7F9100DC1412 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				66E9E7612ABB7AFD00DC1412 /* ViewController.swift */,
+			);
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,7 +306,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = C3BZB3Q66B;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SushiApp/Info.plist;
+				INFOPLIST_FILE = SushiApp/System/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -309,7 +333,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = C3BZB3Q66B;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SushiApp/Info.plist;
+				INFOPLIST_FILE = SushiApp/System/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
