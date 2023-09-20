@@ -7,15 +7,29 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+final class ViewController: UIViewController {
+    
+    //MARK: - UI Elements
+    
+    //MARK: - Variables
+    
+    //MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .green
-        title = "SushiStore"
-        navigationController?.navigationBar.prefersLargeTitles = true
     }
-
-
 }
 
+//MARK: - Layout
+extension ViewController{
+    private func configureUI(){
+        
+    }
+    
+    private func addSubviews(){
+        
+    }
+    
+    private func applyConstraints(){
+        
+    }
+}
