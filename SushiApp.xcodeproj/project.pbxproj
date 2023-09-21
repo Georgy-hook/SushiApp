@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		662128B42ABC81B700B28A8C /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662128B32ABC81B700B28A8C /* CategoryModel.swift */; };
+		662128B62ABC82C600B28A8C /* CategoryMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662128B52ABC82C600B28A8C /* CategoryMenuModel.swift */; };
+		662128BA2ABC9E2200B28A8C /* URlSession + URLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662128B82ABC9E2200B28A8C /* URlSession + URLRequest.swift */; };
+		662128BB2ABC9E2200B28A8C /* UIimageLoadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662128B92ABC9E2200B28A8C /* UIimageLoadImage.swift */; };
+		662128BE2ABC9E6100B28A8C /* CategoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662128BD2ABC9E6100B28A8C /* CategoryService.swift */; };
 		66E9E75E2ABB7AFD00DC1412 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E9E75D2ABB7AFD00DC1412 /* AppDelegate.swift */; };
 		66E9E7602ABB7AFD00DC1412 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E9E75F2ABB7AFD00DC1412 /* SceneDelegate.swift */; };
 		66E9E7622ABB7AFD00DC1412 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E9E7612ABB7AFD00DC1412 /* ViewController.swift */; };
@@ -15,6 +20,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		662128B32ABC81B700B28A8C /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
+		662128B52ABC82C600B28A8C /* CategoryMenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryMenuModel.swift; sourceTree = "<group>"; };
+		662128B82ABC9E2200B28A8C /* URlSession + URLRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URlSession + URLRequest.swift"; sourceTree = "<group>"; };
+		662128B92ABC9E2200B28A8C /* UIimageLoadImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIimageLoadImage.swift; sourceTree = "<group>"; };
+		662128BD2ABC9E6100B28A8C /* CategoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryService.swift; sourceTree = "<group>"; };
 		66E9E75A2ABB7AFD00DC1412 /* SushiApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SushiApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66E9E75D2ABB7AFD00DC1412 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66E9E75F2ABB7AFD00DC1412 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,6 +45,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		662128B22ABC80FE00B28A8C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				662128B32ABC81B700B28A8C /* CategoryModel.swift */,
+				662128B52ABC82C600B28A8C /* CategoryMenuModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		662128B72ABC9E2200B28A8C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				662128B82ABC9E2200B28A8C /* URlSession + URLRequest.swift */,
+				662128B92ABC9E2200B28A8C /* UIimageLoadImage.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		662128BC2ABC9E4200B28A8C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				662128BD2ABC9E6100B28A8C /* CategoryService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		66E9E7512ABB7AFD00DC1412 = {
 			isa = PBXGroup;
 			children = (
@@ -54,8 +90,11 @@
 		66E9E75C2ABB7AFD00DC1412 /* SushiApp */ = {
 			isa = PBXGroup;
 			children = (
-				66E9E7732ABB7F9100DC1412 /* Presentation */,
+				662128BC2ABC9E4200B28A8C /* Services */,
+				662128B72ABC9E2200B28A8C /* Helpers */,
+				662128B22ABC80FE00B28A8C /* Model */,
 				66E9E7712ABB7F1900DC1412 /* System */,
+				66E9E7732ABB7F9100DC1412 /* Presentation */,
 			);
 			path = SushiApp;
 			sourceTree = "<group>";
@@ -158,9 +197,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				662128BB2ABC9E2200B28A8C /* UIimageLoadImage.swift in Sources */,
+				662128BA2ABC9E2200B28A8C /* URlSession + URLRequest.swift in Sources */,
 				66E9E7622ABB7AFD00DC1412 /* ViewController.swift in Sources */,
+				662128B42ABC81B700B28A8C /* CategoryModel.swift in Sources */,
 				66E9E75E2ABB7AFD00DC1412 /* AppDelegate.swift in Sources */,
+				662128B62ABC82C600B28A8C /* CategoryMenuModel.swift in Sources */,
 				66E9E7602ABB7AFD00DC1412 /* SceneDelegate.swift in Sources */,
+				662128BE2ABC9E6100B28A8C /* CategoryService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
