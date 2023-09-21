@@ -13,7 +13,10 @@ final class ViewController: UIViewController {
     
     //MARK: - Variables
     let categoryService = CategoryService.shared
+    let categoryMenuService = CategoryMenuService.shared
     private var categoryServiceObserver: NSObjectProtocol?
+    private var categoryMenuServiceObserver: NSObjectProtocol?
+    
     //MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,8 +24,10 @@ final class ViewController: UIViewController {
         addSubviews()
         applyConstraints()
         addObserverToCategory()
+        addObserverToMenu()
         
-        categoryService.fetchCharacters()
+        categoryService.fetchCategories()
+        categoryMenuService.fetchMenu(with: 23)
     }
 }
 
@@ -57,6 +62,20 @@ extension ViewController{
                 
             }
         print(categoryService.categories)
+    }
+    
+    private func addObserverToMenu(){
+        categoryMenuServiceObserver = NotificationCenter.default
+            .addObserver(
+                forName: CategoryMenuService.didChangeNotification,
+                object: nil,
+                queue: .main
+            ) { [weak self] _ in
+                guard let self = self else { return }
+                print(categoryMenuService.menu)
+                
+            }
+        print(categoryMenuService.menu)
     }
 }
 

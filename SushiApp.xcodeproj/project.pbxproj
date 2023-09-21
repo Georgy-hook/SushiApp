@@ -12,6 +12,7 @@
 		662128BA2ABC9E2200B28A8C /* URlSession + URLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662128B82ABC9E2200B28A8C /* URlSession + URLRequest.swift */; };
 		662128BB2ABC9E2200B28A8C /* UIimageLoadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662128B92ABC9E2200B28A8C /* UIimageLoadImage.swift */; };
 		662128BE2ABC9E6100B28A8C /* CategoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662128BD2ABC9E6100B28A8C /* CategoryService.swift */; };
+		662128C12ABCA67C00B28A8C /* CategoryMenuService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662128C02ABCA67C00B28A8C /* CategoryMenuService.swift */; };
 		66E9E75E2ABB7AFD00DC1412 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E9E75D2ABB7AFD00DC1412 /* AppDelegate.swift */; };
 		66E9E7602ABB7AFD00DC1412 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E9E75F2ABB7AFD00DC1412 /* SceneDelegate.swift */; };
 		66E9E7622ABB7AFD00DC1412 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E9E7612ABB7AFD00DC1412 /* ViewController.swift */; };
@@ -25,6 +26,7 @@
 		662128B82ABC9E2200B28A8C /* URlSession + URLRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URlSession + URLRequest.swift"; sourceTree = "<group>"; };
 		662128B92ABC9E2200B28A8C /* UIimageLoadImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIimageLoadImage.swift; sourceTree = "<group>"; };
 		662128BD2ABC9E6100B28A8C /* CategoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryService.swift; sourceTree = "<group>"; };
+		662128C02ABCA67C00B28A8C /* CategoryMenuService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryMenuService.swift; sourceTree = "<group>"; };
 		66E9E75A2ABB7AFD00DC1412 /* SushiApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SushiApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66E9E75D2ABB7AFD00DC1412 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66E9E75F2ABB7AFD00DC1412 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				662128BD2ABC9E6100B28A8C /* CategoryService.swift */,
+				662128C02ABCA67C00B28A8C /* CategoryMenuService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 				662128B42ABC81B700B28A8C /* CategoryModel.swift in Sources */,
 				66E9E75E2ABB7AFD00DC1412 /* AppDelegate.swift in Sources */,
 				662128B62ABC82C600B28A8C /* CategoryMenuModel.swift in Sources */,
+				662128C12ABCA67C00B28A8C /* CategoryMenuService.swift in Sources */,
 				66E9E7602ABB7AFD00DC1412 /* SceneDelegate.swift in Sources */,
 				662128BE2ABC9E6100B28A8C /* CategoryService.swift in Sources */,
 			);
