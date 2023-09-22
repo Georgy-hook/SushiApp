@@ -16,7 +16,8 @@ struct CategoryMenu: Codable {
 // MARK: - MenuList
 struct MenuList: Codable {
     let id, image, name, content: String
-    let price, weight: String
+    let price: String
+    let weight: String?
     let spicy: String?
 }
 

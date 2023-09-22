@@ -11,8 +11,9 @@ final class CategoryCollectionView:UICollectionView{
     
     // MARK: - Variables
     private let params = GeometricParams(cellCount: 3, leftInset: 20, rightInset: 0, cellSpacing: 5)
-    private var cells: [CategoryMenuList] = [CategoryMenuList(menuID: "22", image: "", name: "dfdf", subMenuCount: 22)]
+    private var cells: [CategoryMenuList] = []
     weak var delegateVC: ViewControllerProtocol?
+    private(set) var title = "" 
     // MARK: - Initiliazation
     init() {
         let layout = UICollectionViewFlowLayout()
@@ -58,11 +59,13 @@ extension CategoryCollectionView:UICollectionViewDelegate{
         guard let delegateVC = delegateVC else { return }
         guard let menuID = Int(cells[indexPath.item].menuID) else { return }
         delegateVC.fetchMenu(with: menuID)
+        title = cells[indexPath.item].name
     }
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout
 extension CategoryCollectionView:UICollectionViewDelegateFlowLayout{
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 10, left: params.leftInset, bottom: 10, right: params.rightInset)
     }

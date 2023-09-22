@@ -28,7 +28,6 @@ class CategoryCollectionViewCell:UICollectionViewCell{
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 20, weight: .bold)
         label.adjustsFontSizeToFitWidth = true
-        //label.minimumScaleFactor = 0.5
         label.textColor = .white
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -64,7 +63,6 @@ class CategoryCollectionViewCell:UICollectionViewCell{
     func set(with category: CategoryMenuList){
         let baseURLString = "https://vkus-sovet.ru"
         let imageURLString = baseURLString + category.image
-        print(category.image)
         imageView.loadImage(from: imageURLString){_ in }
         nameLabel.text = category.name
         countLabel.text = "\(category.subMenuCount) товаров"

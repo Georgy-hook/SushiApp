@@ -23,6 +23,7 @@ final class ViewController: UIViewController {
     }()
     
     let categoryCollectionView = CategoryCollectionView()
+    let categoryMenuCollectionView = CategoryMenuCollectionView()
     
     //MARK: - Variables
     let categoryService = CategoryService.shared
@@ -55,6 +56,7 @@ extension ViewController{
     
     private func addSubviews(){
         view.addSubview(categoryCollectionView)
+        view.addSubview(categoryMenuCollectionView)
     }
     
     private func applyConstraints(){
@@ -62,7 +64,12 @@ extension ViewController{
             categoryCollectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             categoryCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             categoryCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            categoryCollectionView.heightAnchor.constraint(equalToConstant: 160)
+            categoryCollectionView.heightAnchor.constraint(equalToConstant: 160),
+            
+            categoryMenuCollectionView.topAnchor.constraint(equalTo: categoryCollectionView.bottomAnchor),
+            categoryMenuCollectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            categoryMenuCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            categoryMenuCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
     }
     
@@ -105,10 +112,10 @@ extension ViewController{
                 queue: .main
             ) { [weak self] _ in
                 guard let self = self else { return }
-                print(categoryMenuService.menu)
+                categoryMenuCollectionView.set(with: categoryMenuService.menu, and: categoryCollectionView.title)
                 
             }
-        print(categoryMenuService.menu)
+        categoryMenuCollectionView.set(with: categoryMenuService.menu, and: categoryCollectionView.title)
     }
 }
 
@@ -117,6 +124,4 @@ extension ViewController:ViewControllerProtocol{
     func fetchMenu(with menuID: Int) {
         categoryMenuService.fetchMenu(with: menuID)
     }
-    
-    
 }

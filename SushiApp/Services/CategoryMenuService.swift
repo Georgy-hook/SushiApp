@@ -25,6 +25,8 @@ final class CategoryMenuService {
         guard !isFetching else { return }
         isFetching = true
         
+        menu = []
+        
         task?.cancel()
         let request = menuURLRequest(with: menuID)
         let session = URLSession.shared
