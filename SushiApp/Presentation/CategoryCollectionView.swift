@@ -38,6 +38,16 @@ final class CategoryCollectionView:UICollectionView{
         self.cells = categoryList
         self.reloadData()
     }
+    
+    func initialSelect(){
+        let indexPath = IndexPath(item: 0, section: 0)
+        guard let delegateVC = delegateVC else { return }
+        guard let menuID = Int(cells[indexPath.item].menuID) else { return }
+        selectItem(at: indexPath, animated: false, scrollPosition: UICollectionView.ScrollPosition.centeredHorizontally)
+        delegateVC.fetchMenu(with: menuID)
+        title = cells[indexPath.item].name
+        
+    }
 }
 
 // MARK: - UICollectionViewDataSource
