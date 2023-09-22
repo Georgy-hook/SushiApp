@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6620E7462ABDB18D002B2B45 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6620E7452ABDB18D002B2B45 /* TabBarController.swift */; };
 		662128B42ABC81B700B28A8C /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662128B32ABC81B700B28A8C /* CategoryModel.swift */; };
 		662128B62ABC82C600B28A8C /* CategoryMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662128B52ABC82C600B28A8C /* CategoryMenuModel.swift */; };
 		662128BA2ABC9E2200B28A8C /* URlSession + URLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662128B82ABC9E2200B28A8C /* URlSession + URLRequest.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6620E7452ABDB18D002B2B45 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		662128B32ABC81B700B28A8C /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
 		662128B52ABC82C600B28A8C /* CategoryMenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryMenuModel.swift; sourceTree = "<group>"; };
 		662128B82ABC9E2200B28A8C /* URlSession + URLRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URlSession + URLRequest.swift"; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				66E9E7612ABB7AFD00DC1412 /* ViewController.swift */,
+				6620E7452ABDB18D002B2B45 /* TabBarController.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 				662128BB2ABC9E2200B28A8C /* UIimageLoadImage.swift in Sources */,
 				662128BA2ABC9E2200B28A8C /* URlSession + URLRequest.swift in Sources */,
 				66E9E7622ABB7AFD00DC1412 /* ViewController.swift in Sources */,
+				6620E7462ABDB18D002B2B45 /* TabBarController.swift in Sources */,
 				662128B42ABC81B700B28A8C /* CategoryModel.swift in Sources */,
 				66E9E75E2ABB7AFD00DC1412 /* AppDelegate.swift in Sources */,
 				662128B62ABC82C600B28A8C /* CategoryMenuModel.swift in Sources */,

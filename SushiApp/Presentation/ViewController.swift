@@ -10,7 +10,13 @@ import UIKit
 final class ViewController: UIViewController {
     
     //MARK: - UI Elements
-    
+    let logoImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "vkussovetLogo")
+        imageView.contentMode = .scaleAspectFit
+        imageView.backgroundColor = .clear
+        return imageView
+    }()
     //MARK: - Variables
     let categoryService = CategoryService.shared
     let categoryMenuService = CategoryMenuService.shared
@@ -34,7 +40,9 @@ final class ViewController: UIViewController {
 //MARK: - Layout
 extension ViewController{
     private func configureUI(){
+        view.backgroundColor = UIColor(named: "Sh Background")
         
+        setupNavBar()  
     }
     
     private func addSubviews(){
@@ -45,6 +53,22 @@ extension ViewController{
         NSLayoutConstraint.activate([
             
         ])
+    }
+    
+    private func setupNavBar(){
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
+        let logoImage = UIBarButtonItem(customView: logoImageView)
+        navigationItem.leftBarButtonItem = logoImage
+        
+        let phoneBtn = UIButton(type: .custom)
+        let largeConfig = UIImage.SymbolConfiguration(pointSize: 30, weight: .bold, scale: .default)
+        phoneBtn.setImage(UIImage(systemName: "phone", withConfiguration: largeConfig), for: .normal)
+        phoneBtn.tintColor = .white
+        
+        let phoneBarItem = UIBarButtonItem(customView: phoneBtn)
+        
+        navigationItem.rightBarButtonItem = phoneBarItem
     }
 }
 
