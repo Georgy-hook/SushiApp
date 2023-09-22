@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol ViewControllerProtocol:AnyObject{
+    func fetchMenu(with menuID:Int)
+}
+
 final class ViewController: UIViewController {
     
     //MARK: - UI Elements
@@ -17,6 +21,9 @@ final class ViewController: UIViewController {
         imageView.backgroundColor = .clear
         return imageView
     }()
+    
+    let categoryCollectionView = CategoryCollectionView()
+    
     //MARK: - Variables
     let categoryService = CategoryService.shared
     let categoryMenuService = CategoryMenuService.shared
@@ -33,7 +40,6 @@ final class ViewController: UIViewController {
         addObserverToMenu()
         
         categoryService.fetchCategories()
-        categoryMenuService.fetchMenu(with: 23)
     }
 }
 
@@ -43,21 +49,24 @@ extension ViewController{
         view.backgroundColor = UIColor(named: "Sh Background")
         
         setupNavBar()  
+        
+        categoryCollectionView.delegateVC = self
     }
     
     private func addSubviews(){
-        
+        view.addSubview(categoryCollectionView)
     }
     
     private func applyConstraints(){
         NSLayoutConstraint.activate([
-            
+            categoryCollectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            categoryCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            categoryCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            categoryCollectionView.heightAnchor.constraint(equalToConstant: 160)
         ])
     }
     
     private func setupNavBar(){
-        navigationController?.navigationBar.prefersLargeTitles = true
-        
         let logoImage = UIBarButtonItem(customView: logoImageView)
         navigationItem.leftBarButtonItem = logoImage
         
@@ -82,10 +91,10 @@ extension ViewController{
                 queue: .main
             ) { [weak self] _ in
                 guard let self = self else { return }
-                print(categoryService.categories)
+                categoryCollectionView.set(with: categoryService.categories)
                 
             }
-        print(categoryService.categories)
+        categoryCollectionView.set(with: categoryService.categories)
     }
     
     private func addObserverToMenu(){
@@ -103,3 +112,11 @@ extension ViewController{
     }
 }
 
+//MARK: - ViewControllerProtocol
+extension ViewController:ViewControllerProtocol{
+    func fetchMenu(with menuID: Int) {
+        categoryMenuService.fetchMenu(with: menuID)
+    }
+    
+    
+}
