@@ -99,9 +99,11 @@ extension ViewController{
             ) { [weak self] _ in
                 guard let self = self else { return }
                 categoryCollectionView.set(with: categoryService.categories)
+                categoryCollectionView.initialSelect()
                 
             }
         categoryCollectionView.set(with: categoryService.categories)
+        
     }
     
     private func addObserverToMenu(){
